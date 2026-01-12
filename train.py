@@ -1,5 +1,5 @@
 # train.py
-# CreditWise Loan Approval - training script (deployment-ready)
+# ML-Based Loan Approval Predictor - training script
 
 import pandas as pd
 import joblib
