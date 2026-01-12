@@ -1,17 +1,17 @@
 # ML-Based Loan Approval Predictor
 
-## 📌 Project Overview
+## Project Overview
 **ML-Based Loan Approval Predictor** is a machine learning–based application designed to predict whether a loan application should be **Approved** or **Rejected** based on an applicant’s personal, financial, and credit information.
 
 The project simulates a real-world scenario where a mid-sized financial institution (SecureTrust Bank) aims to reduce:
-- ❌ Rejection of low-risk customers, leading to loss of business 
-- ❌ Approval of high-risk customers, leading to financial losses 
+-  Rejection of low-risk customers, leading to loss of business 
+-  Approval of high-risk customers, leading to financial losses 
 
 by introducing a **data-driven loan screening system** to assist human loan officers.
 
 ---
 
-## 🎯 Problem Statement
+## Problem Statement
 Traditionally, loan approvals were handled via **manual verification**, which is:
 - Time-consuming  
 - Inconsistent  
@@ -22,7 +22,7 @@ The objective of this project is to:
 
 ---
 
-## 🗂 Dataset Description
+## Dataset Description
 Each row in the dataset represents a **loan applicant**, with features describing their financial, demographic, and credit profile.
 
 ### Key Features
@@ -50,9 +50,9 @@ Each row in the dataset represents a **loan applicant**, with features describin
 
 ---
 
-## 🧠 Machine Learning Approach
+## Machine Learning Approach
 
-### 📊 Exploratory Data Analysis & Model Selection
+### Exploratory Data Analysis & Model Selection
 
 The complete exploratory data analysis (EDA), feature inspection, and comparison of multiple machine learning models
 (Logistic Regression, KNN, and Naive Bayes) is documented in the following Jupyter notebook:
@@ -66,7 +66,7 @@ This notebook details:
 - The rationale for selecting Logistic Regression as the final deployed model based on balanced performance
 
 ### Models Studied
-- Logistic Regression ✅
+- Logistic Regression
 - K-Nearest Neighbors (KNN)
 - Naive Bayes
 
@@ -81,7 +81,7 @@ Precision alone was not sufficient for this problem, as the objective was to min
 
 ---
 
-## 🔧 Data Preprocessing
+## Data Preprocessing
 - Missing numerical values → Mean Imputation  
 - Missing categorical values → Most Frequent Imputation  
 - Categorical variables → One-Hot Encoding  
@@ -96,7 +96,7 @@ All preprocessing and modeling steps are combined into a **single Scikit-learn P
 
 ---
 
-## 🖥 Application Interface (Streamlit)
+## Application Interface (Streamlit)
 A **Streamlit web app** allows users to:
 - Enter applicant and loan details via a form
 - Receive instant predictions (Approved / Rejected)
@@ -106,14 +106,14 @@ The UI is **fully custom-built** using Streamlit components and mirrors the feat
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 - The dataset is educational and does not reflect jurisdiction-specific lending policies (e.g., Canadian GDS/TDS ratios).
 - The model learns from historical approval patterns and may replicate dataset bias.
 - This system is intended as a decision-support tool and should not be used for real-world financial decisions.
 
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
-### 1️⃣ Install dependencies
+### Install dependencies
 ```bash
 pip install -r requirements.txt
