@@ -7,7 +7,7 @@ The project simulates a real-world scenario where a mid-sized financial institut
 - ❌ Rejection of low-risk customers, leading to loss of business 
 - ❌ Approval of high-risk customers, leading to financial losses 
 
-by introducing an **intelligent, data-driven loan screening system** to assist human loan officers.
+by introducing a **data-driven loan screening system** to assist human loan officers.
 
 ---
 
@@ -52,6 +52,19 @@ Each row in the dataset represents a **loan applicant**, with features describin
 
 ## 🧠 Machine Learning Approach
 
+### 📊 Exploratory Data Analysis & Model Selection
+
+The complete exploratory data analysis (EDA), feature inspection, and comparison of multiple machine learning models
+(Logistic Regression, KNN, and Naive Bayes) is documented in the following Jupyter notebook:
+
+**`analysis_eda_model_comparison.ipynb`**
+
+This notebook details:
+- Data distributions and class balance
+- Feature relationships and correlations
+- Evaluation of multiple models using Precision, Recall, F1-score, and Accuracy
+- The rationale for selecting Logistic Regression as the final deployed model based on balanced performance
+
 ### Models Studied
 - Logistic Regression ✅
 - K-Nearest Neighbors (KNN)
@@ -63,6 +76,8 @@ Each row in the dataset represents a **loan applicant**, with features describin
 - It handled **one-hot encoded categorical data** well
 - It offers **interpretability**, which is critical in financial decision-making
 - It aligns with real-world credit scoring practices
+Precision alone was not sufficient for this problem, as the objective was to minimize false rejections of eligible applicants while still controlling risk, making F1-score a more appropriate evaluation metric.
+
 
 ---
 
@@ -90,6 +105,12 @@ A **Streamlit web app** allows users to:
 The UI is **fully custom-built** using Streamlit components and mirrors the features used during training.
 
 ---
+
+## ⚠️ Limitations
+- The dataset is educational and does not reflect jurisdiction-specific lending policies (e.g., Canadian GDS/TDS ratios).
+- The model learns from historical approval patterns and may replicate dataset bias.
+- This system is intended as a decision-support tool and should not be used for real-world financial decisions.
+
 
 ## 🚀 How to Run the Project
 
