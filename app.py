@@ -34,7 +34,7 @@ with st.form("loan_form"):
     with col1:
         applicant_income = st.number_input("Applicant Income (monthly)", min_value=0.0, value=30000.0, step=500.0)
         age = st.number_input("Age", min_value=18, max_value=100, value=28, step=1)
-        dependents = st.number_input("Dependents", min_value=0, max_value=20, value=0, step=1)
+        dependents = st.number_input("Dependents", min_value=0, max_value=10, value=0, step=1)
         credit_score = st.number_input("Credit Score", min_value=300, max_value=900, value=720, step=1)
         existing_loans = st.number_input("Existing Loans", min_value=0, max_value=50, value=0, step=1)
 
@@ -49,16 +49,16 @@ with st.form("loan_form"):
     col3, col4 = st.columns(2)
     with col3:
         loan_amount = st.number_input("Loan Amount", min_value=0.0, value=300000.0, step=5000.0)
-        loan_term = st.number_input("Loan Term (months)", min_value=6, max_value=480, value=240, step=6)
-        loan_purpose = st.selectbox("Loan Purpose", ["Home", "Education", "Personal", "Business"])
-        property_area = st.selectbox("Property Area", ["Urban", "Semi-Urban", "Rural"])
+        loan_term = st.selectbox("Loan Term (months)", [12, 24, 36, 48, 60, 72, 84], index=2)
+        loan_purpose = st.selectbox("Loan Purpose", ["Home", "Education", "Personal", "Business", "Car"])
+        property_area = st.selectbox("Property Area", ["Urban", "Semiurban", "Rural"])
 
     with col4:
-        employment_status = st.selectbox("Employment Status", ["Salaried", "Self-Employed", "Business"])
+        employment_status = st.selectbox("Employment Status", ["Salaried", "Self-employed", "Contract", "Unemployed"])
         marital_status = st.selectbox("Marital Status", ["Single", "Married"])
-        education_level = st.selectbox("Education Level", ["Undergraduate", "Graduate", "Postgraduate"])
+        education_level = st.selectbox("Education Level", ["Graduate", "Not Graduate"])
         gender = st.selectbox("Gender", ["Male", "Female"])
-        employer_category = st.selectbox("Employer Category", ["Govt", "Private", "Self"])
+        employer_category = st.selectbox("Employer Category", ["Government", "Private", "Business", "Unemployed", "MNC"])
 
     submitted = st.form_submit_button("Predict")
 
